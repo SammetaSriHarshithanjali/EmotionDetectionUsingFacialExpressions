@@ -99,7 +99,7 @@ emotion_detection/
 Clone the repository:
 
 ```bash
-git clone https://github.com/<your-username>/EmotionDetectionUsingFacialExpressions.git
+git clone https://github.com/SammetaSriHarshithanjali/EmotionDetectionUsingFacialExpressions.git
 ```
 
 Navigate to the project:
