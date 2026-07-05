@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Image Emotion Detection</title>
+<link rel="stylesheet" href="/static/css/style.css">
+<script src="/static/js/app.js"></script>
+</head>
+
+<body>
+
+<div class="navbar">
+<a href="/" class="home-btn">Home</a>
+<h2>Image Emotion Detection</h2>
+</div>
+
+<form action="/upload-image/" method="post" enctype="multipart/form-data">
+
+<div class="workspace">
+
+<div class="panel">
+
+<h3>Input Image</h3>
+
+<div class="preview-box">
+
+<label class="drop-area">
+<input type="file" name="file" accept="image/*" required>
+<span>Drag & Drop Image<br>or Click to Upload</span>
+</label>
+
+{% if input_image %}
+<img src="{{ input_image }}" class="preview">
+{% endif %}
+
+</div>
+
+</div>
+
+<div class="center">
+<button class="upload-btn">Upload</button>
+</div>
+
+<div class="panel">
+
+<h3>Output Image</h3>
+
+<div class="preview-box">
+
+{% if output_image %}
+<img src="{{ output_image }}" class="preview">
+{% endif %}
+
+</div>
+
+</div>
+
+</div>
+
+</form>
+
+<footer>
+App created by Anjali and Deepu
+</footer>
+
+</body>
+</html>

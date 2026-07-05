@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Video Emotion Detection</title>
+<link rel="stylesheet" href="/static/css/style.css">
+<script src="/static/js/app.js"></script>
+</head>
+
+<body>
+
+<div class="navbar">
+<a href="/" class="home-btn">Home</a>
+<h2>Video Emotion Detection</h2>
+</div>
+
+<form action="/upload-video/" method="post" enctype="multipart/form-data">
+
+<div class="workspace">
+
+<!-- INPUT BOX -->
+<div class="panel">
+
+<h3>Input Video</h3>
+
+<div class="preview-box">
+
+<label class="drop-area">
+<input type="file" name="file" accept="video/*" required>
+<span>Drag & Drop Video<br>or Click to Upload</span>
+</label>
+
+{% if input_video %}
+<video controls class="preview">
+<source src="{{ input_video }}" type="video/mp4">
+</video>
+{% endif %}
+
+</div>
+
+</div>
+
+<!-- BUTTON -->
+<div class="center">
+<button class="upload-btn">Upload</button>
+</div>
+
+<!-- OUTPUT BOX -->
+<div class="panel">
+
+<h3>Output Video</h3>
+
+<div class="preview-box">
+
+{% if output_video %}
+<video controls class="preview">
+<source src="{{ output_video }}" type="video/mp4">
+</video>
+{% endif %}
+
+</div>
+
+</div>
+
+</div>
+
+</form>
+
+<footer>
+App created by Anjali and Deepu
+</footer>
+
+</body>
+</html>
